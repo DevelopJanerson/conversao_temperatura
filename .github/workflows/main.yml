@@ -47,6 +47,6 @@ jobs:
         uses: azure/k8s-deploy@v5
         with:
           manifests: |
-            deployment.yml
+            ./deployment.yml
           images: |
             ${{ secrets.DOCKERHUB_USERNAME }}/conversao-temperatura:${{ github.run_number }}
