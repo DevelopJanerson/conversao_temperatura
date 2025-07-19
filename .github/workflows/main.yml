@@ -3,7 +3,7 @@ name: Conversao Temperatura Release Pipeline
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build-and-push-docker-image:
