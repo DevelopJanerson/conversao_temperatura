@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: web
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: web
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: janerson1981/maratona-devops-ia:v1
+        image: janerson144/conversao_temperatura:v1
         ports:
         - containerPort: 8080
 ---
