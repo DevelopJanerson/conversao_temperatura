@@ -45,6 +45,12 @@ app.post('/', (req, res) => {
     res.render('index', {valorConvertido: resultado, "maquina": os.hostname()});
  });
 
+ // Endpoint para métricas do Prometheus
+app.get('/metrics', async (req, res) => {
+  res.set('Content-Type', register.contentType);
+  res.end(await register.metrics());
+});
+
 app.listen(8080, () => {
     console.log("Servidor rodando na porta 8080");
 });
