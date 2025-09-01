@@ -26,7 +26,7 @@ jobs:
           context: src
           file: src/Dockerfile
           push: true
-          tags: janerson1981/maratona-devops-ia:v${{ github.run_number }}
+          tags: janerson144/conversao_temperatura:v${{ github.run_number }}
 
   deploy-to-kubernetes:
     name: Deploy to Kubernetes
@@ -49,4 +49,4 @@ jobs:
           manifests: |
             ./deployment.yaml
           images: |
-            janerson1981/maratona-devops-ia:v${{ github.run_number }}
+            janerson144/conversao_temperatura:v${{ github.run_number }}
